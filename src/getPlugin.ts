@@ -5,4 +5,4 @@ import { TypescriptPlugin } from '.';
  * Return the plugin.
  * @returns {ServicePlugin} TS Plugin.
  */
-export const getPlugin = (): ServicePlugin => TypescriptPlugin;
+export default (): ServicePlugin => TypescriptPlugin;
