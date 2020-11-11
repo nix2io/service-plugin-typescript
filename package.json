@@ -1,11 +1,11 @@
 {
-    "name": "@nix2/package-name",
+    "name": "@nix2/service-plugin-typescript",
     "version": "1.0.0",
-    "description": "PACKAGE_DESCRIPTION",
+    "description": "Create Typescript services with this plugin.",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
-    "repository": "https://github.com/nix2io/package-template.git",
-    "author": "Name <name@nix2.io>",
+    "repository": "https://github.com/nix2io/service-plugin-typescript.git",
+    "author": "Max Koon <maxk@nix2.io>",
     "license": "CC-BY-1.0",
     "private": false,
     "scripts": {
