@@ -1,6 +1,6 @@
 {
     "name": "@nix2/service-plugin-typescript",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Create Typescript services with this plugin.",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
@@ -30,5 +30,8 @@
     },
     "files": [
         "dist"
-    ]
+    ],
+    "dependencies": {
+        "@nix2/service-core": "1.0.5"
+    }
 }
