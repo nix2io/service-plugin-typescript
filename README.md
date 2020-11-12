@@ -12,7 +12,15 @@
 # Installation
 
 ```sh
-yarn add @nix2/service-plugin-typescript
+$ dev plugin add typescript
 ```
 
 # Usage
+
+# API
+
+You can use this to build specialized typescript plugins.
+
+```sh
+yarn add @nix2/service-plugin-typescript
+```
