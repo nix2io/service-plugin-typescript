@@ -1,4 +1,4 @@
-<p align="center"><img height="220px" src="https://i.imgur.com/u2d99cq.png" alt="Logo" /><p>
+<p align="center"><img height="220px" src="https://i.imgur.com/AQT2H6O.png" alt="Logo" /><p>
 
 <p align="center">
   <strong>Typescript Service Plugin</strong><br />
