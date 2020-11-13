@@ -39,12 +39,15 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@nix2/service-core@1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@nix2/service-core/-/service-core-1.0.5.tgz#ded75fef8189eea3119e6bb7eb5012d7d1f875c1"
-  integrity sha512-O3NvtcTyaPPZB6DnjYtkSTZKVQK6P116CQlmwb+v7Mv/pjg5g2j7yGini0MgIjpw688aP0012NpzhyOdHoprBA==
+"@nix2/service-core@1.0.10":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@nix2/service-core/-/service-core-1.0.10.tgz#8658d630d2a3ce1652c4ace8b7ea63809975a2cb"
+  integrity sha512-2YlIPake3husbxdfUcFxPEnNG7fIz6N6EPsAbPUgkJEC7j5+RhGSZ/kb6yTcnvpdnhfXh/sL3P0RCE2WqWSYAA==
   dependencies:
     axios "^0.21.0"
+    dotenv "^8.2.0"
+    eol "^0.9.1"
+    escape-string-regexp "^4.0.0"
     js-yaml "^3.14.0"
     semver "^7.3.2"
 
@@ -425,6 +428,11 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
+dotenv@^8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
+  integrity sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
+
 emoji-regex@^7.0.1:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-7.0.3.tgz#933a04052860c85e83c122479c4748a8e4c72156"
@@ -437,7 +445,12 @@ enquirer@^2.3.5:
   dependencies:
     ansi-colors "^4.1.1"
 
-escape-string-regexp@4.0.0:
+eol@^0.9.1:
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/eol/-/eol-0.9.1.tgz#f701912f504074be35c6117a5c4ade49cd547acd"
+  integrity sha512-Ds/TEoZjwggRoz/Q2O7SE3i4Jm66mqTDfmdHdq/7DKVk3bro9Q8h6WdXKdPqFLMoqxrDK5SVRzHVPOS6uuGtrg==
+
+escape-string-regexp@4.0.0, escape-string-regexp@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==

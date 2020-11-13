@@ -1,4 +1,4 @@
-import { Service, ServicePlugin } from '@nix2/service-core';
+import { Service, ServicePlugin, MakeFileType } from '@nix2/service-core';
 import { TypescriptService } from '..';
 
 /**
@@ -11,10 +11,34 @@ export default class TypescriptPlugin extends ServicePlugin {
 
     /**
      * Return the services for the TS Plugin.
+     * @function getServices
+     * @memberof TypescriptPlugin
      * @static
      * @returns {typeof Service[]} TS Service.
      */
     static getServices(): typeof Service[] {
         return [TypescriptService];
+    }
+
+    /**
+     * Return the files that can be created with the `make` command in the CLI.
+     * @function getMakeFiles
+     * @memberof TypescriptPlugin
+     * @static
+     * @returns {MakeFileType[]} List of make files.
+     */
+    static getMakeFiles(): MakeFileType[] {
+        return this.getMakeFiles().concat([
+            {
+                name: 'package',
+                file: 'package.json',
+                method: TypescriptService.prototype.createPackageFile,
+            },
+            {
+                name: 'eslint',
+                file: '.eslintrc.json',
+                method: TypescriptService.prototype.createESLintConfig,
+            },
+        ]);
     }
 }
