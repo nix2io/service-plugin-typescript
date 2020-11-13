@@ -28,7 +28,7 @@ export default class TypescriptPlugin extends ServicePlugin {
      * @returns {MakeFileType[]} List of make files.
      */
     static getMakeFiles(): MakeFileType[] {
-        return this.getMakeFiles().concat([
+        return super.getMakeFiles().concat([
             {
                 name: 'package',
                 file: 'package.json',
