@@ -13,8 +13,7 @@
         "test-format": "prettier --check ./src/**",
         "test": "mocha -r ts-node/register tests/**",
         "lint": "eslint src/**",
-        "prepublish": "tsc",
-        "publish": "npm publish"
+        "prepublish": "tsc"
     },
     "devDependencies": {
         "@types/mocha": "^8.0.3",
