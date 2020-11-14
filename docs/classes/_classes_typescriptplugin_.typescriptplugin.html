@@ -96,14 +96,15 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_classes_typescriptplugin_.typescriptplugin.html#label" class="tsd-kind-icon">LABEL</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_classes_typescriptplugin_.typescriptplugin.html#name" class="tsd-kind-icon">NAME</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-static"><a href="_classes_typescriptplugin_.typescriptplugin.html#label" class="tsd-kind-icon">LABEL</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-static"><a href="_classes_typescriptplugin_.typescriptplugin.html#name" class="tsd-kind-icon">NAME</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_classes_typescriptplugin_.typescriptplugin.html#getservices" class="tsd-kind-icon">get<wbr>Services</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-static"><a href="_classes_typescriptplugin_.typescriptplugin.html#getmakefiles" class="tsd-kind-icon">get<wbr>Make<wbr>Files</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-static"><a href="_classes_typescriptplugin_.typescriptplugin.html#getservices" class="tsd-kind-icon">get<wbr>Services</a></li>
 							</ul>
 						</section>
 					</div>
@@ -111,40 +112,77 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-static">
 					<a name="label" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> LABEL</h3>
 					<div class="tsd-signature tsd-kind-icon">LABEL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Typescript&quot;</span></div>
 					<aside class="tsd-sources">
+						<p>Overrides ServicePlugin.LABEL</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/nix2io/service-plugin-typescript/blob/69e3004/src/classes/TypescriptPlugin.ts#L10">src/classes/TypescriptPlugin.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/nix2io/service-plugin-typescript/blob/5f62c98/src/classes/TypescriptPlugin.ts#L10">src/classes/TypescriptPlugin.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-static">
 					<a name="name" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> NAME</h3>
 					<div class="tsd-signature tsd-kind-icon">NAME<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;typescript&quot;</span></div>
 					<aside class="tsd-sources">
+						<p>Overrides ServicePlugin.NAME</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/nix2io/service-plugin-typescript/blob/69e3004/src/classes/TypescriptPlugin.ts#L9">src/classes/TypescriptPlugin.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/nix2io/service-plugin-typescript/blob/5f62c98/src/classes/TypescriptPlugin.ts#L9">src/classes/TypescriptPlugin.ts:9</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-static">
+					<a name="getmakefiles" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>Make<wbr>Files</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Make<wbr>Files<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MakeFileType</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides ServicePlugin.getMakeFiles</p>
+								<ul>
+									<li>Defined in <a href="https://github.com/nix2io/service-plugin-typescript/blob/5f62c98/src/classes/TypescriptPlugin.ts#L30">src/classes/TypescriptPlugin.ts:30</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Return the files that can be created with the <code>make</code> command in the CLI.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>function</dt>
+									<dd><p>getMakeFiles</p>
+									</dd>
+									<dt>memberof</dt>
+									<dd><p>TypescriptPlugin</p>
+									</dd>
+									<dt>static</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">MakeFileType</span><span class="tsd-signature-symbol">[]</span></h4>
+							<p>List of make files.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-static">
 					<a name="getservices" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>Services</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-static">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Services<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">Service</span><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Overrides ServicePlugin.getServices</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/nix2io/service-plugin-typescript/blob/69e3004/src/classes/TypescriptPlugin.ts#L17">src/classes/TypescriptPlugin.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/nix2io/service-plugin-typescript/blob/5f62c98/src/classes/TypescriptPlugin.ts#L19">src/classes/TypescriptPlugin.ts:19</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -152,6 +190,12 @@
 									<p>Return the services for the TS Plugin.</p>
 								</div>
 								<dl class="tsd-comment-tags">
+									<dt>function</dt>
+									<dd><p>getServices</p>
+									</dd>
+									<dt>memberof</dt>
+									<dd><p>TypescriptPlugin</p>
+									</dd>
 									<dt>static</dt>
 									<dd></dd>
 								</dl>
@@ -202,13 +246,16 @@
 					<li class="current tsd-kind-class tsd-parent-kind-module">
 						<a href="_classes_typescriptplugin_.typescriptplugin.html" class="tsd-kind-icon">Typescript<wbr>Plugin</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-static">
 								<a href="_classes_typescriptplugin_.typescriptplugin.html#label" class="tsd-kind-icon">LABEL</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-static">
 								<a href="_classes_typescriptplugin_.typescriptplugin.html#name" class="tsd-kind-icon">NAME</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-static">
+								<a href="_classes_typescriptplugin_.typescriptplugin.html#getmakefiles" class="tsd-kind-icon">get<wbr>Make<wbr>Files</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-static">
 								<a href="_classes_typescriptplugin_.typescriptplugin.html#getservices" class="tsd-kind-icon">get<wbr>Services</a>
 							</li>
 						</ul>

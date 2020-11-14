@@ -1,4 +1,4 @@
-<p align="center"><img height="220px" src="https://i.imgur.com/48BeKfE.png" alt="Logo" /><p>
+<p align="center"><img height="220px" src="https://i.imgur.com/AQT2H6O.png" alt="Logo" /><p>
 
 <p align="center">
   <strong>Typescript Service Plugin</strong><br />
@@ -12,7 +12,15 @@
 # Installation
 
 ```sh
-yarn add @nix2/service-plugin-typescript
+$ dev plugin add typescript
 ```
 
 # Usage
+
+# API
+
+You can use this to build specialized typescript plugins.
+
+```sh
+yarn add @nix2/service-plugin-typescript
+```
