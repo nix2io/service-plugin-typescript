@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  [ <a href="#installation">Installation 💾</a> | <a href="#usage">Usage 🤓</a> | <a href="https://www.npmjs.com/package/@nix2/service-plugin-typescript">NPM 📦</a> | <a href="https://github.com/nix2io/service-plugin-typescript">Github 🕸</a> ]
+  [ <a href="#installation">Installation 💾</a> | <a href="https://nix2io.github.io/service-plugin-typescript">API 🤓</a> | <a href="https://www.npmjs.com/package/@nix2/service-plugin-typescript">NPM 📦</a> | <a href="https://github.com/nix2io/service-plugin-typescript">Github 🕸</a> ]
 </p>
 
 # Installation
@@ -15,8 +15,6 @@
 $ dev plugin add typescript
 ```
 
-# Usage
-
 # API
 
 You can use this to build specialized typescript plugins.
@@ -24,3 +22,5 @@ You can use this to build specialized typescript plugins.
 ```sh
 yarn add @nix2/service-plugin-typescript
 ```
+
+Full documentation for the Typescript Plugin is [here](https://nix2io.github.io/service-plugin-typescript)
