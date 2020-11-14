@@ -14,7 +14,7 @@
         "test": "mocha -r ts-node/register tests/**",
         "lint": "eslint src/**",
         "prepublish": "tsc",
-        "mk-docs": "typedoc --name \"Service Core Documentation\" && touch ./docs/.nojekyll",
+        "mk-docs": "typedoc --name \"Typescript Plugin Documentation\" && touch ./docs/.nojekyll",
         "publish": "npm publish"
     },
     "devDependencies": {
