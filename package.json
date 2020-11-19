@@ -14,8 +14,7 @@
         "test": "mocha -r ts-node/register tests/**",
         "lint": "eslint src/**",
         "prepublish": "tsc",
-        "mk-docs": "typedoc --name \"Typescript Plugin Documentation\" && touch ./docs/.nojekyll",
-        "publish": "npm publish"
+        "mk-docs": "typedoc --name \"Typescript Plugin Documentation\" && touch ./docs/.nojekyll"
     },
     "devDependencies": {
         "@types/mocha": "^8.0.3",
