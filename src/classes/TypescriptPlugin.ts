@@ -1,4 +1,5 @@
-import { Service, ServicePlugin, MakeFileType } from '@nix2/service-core';
+import { MakeFileType, Service, ServicePlugin } from '@nix2/service-core';
+
 import { TypescriptService } from '..';
 
 /**
@@ -38,6 +39,11 @@ export default class TypescriptPlugin extends ServicePlugin {
                 name: 'eslint',
                 file: '.eslintrc.json',
                 method: TypescriptService.prototype.createESLintConfig,
+            },
+            {
+                name: 'tsconfig',
+                file: 'tsconfig.json',
+                method: TypescriptService.prototype.createTSConfig,
             },
         ]);
     }

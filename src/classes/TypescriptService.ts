@@ -5,7 +5,7 @@ import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'fs';
 import { Service, Info, Schema, ExecutionContext } from '@nix2/service-core';
 
 import { PACKAGES } from '../constants';
-import { PackageJSONType, ESLintConfigType } from '../types';
+import { PackageJSONType, ESLintConfigType, TSConfigType } from '../types';
 
 /**
  * Class to represent a Typescript Service.
@@ -198,8 +198,9 @@ export default abstract class TypescriptService extends Service {
      * 1. Runs the base post init commands.
      * 2. Create the `package.json`.
      * 3. Create the files for `src/`.
-     * 4. Create an eslint config file.
-     * 5. Install the packages.
+     * 4. Create `tsconfig.json` and `tsconfig.build.json`.
+     * 5. Create an eslint config file.
+     * 6. Install the packages.
      * @function postInit
      * @memberof TypescriptService
      * @returns {void}
@@ -208,8 +209,74 @@ export default abstract class TypescriptService extends Service {
         super.postInit();
         this.createPackageFile();
         this.createSourceFiles();
+        this.createTSConfig();
         this.createESLintConfig();
         this.installPackages();
+    }
+
+    /**
+     * Makes the TS Config content.
+     * @function makeTSConfig
+     * @memberof TypescriptService
+     * @returns {TSConfigType} TS Config object.
+     */
+    makeTSConfig(): TSConfigType {
+        return {
+            compilerOptions: {
+                target: 'es6',
+                module: 'commonjs',
+                lib: ['dom', 'es6', 'es2017', 'esnext.asynciterable'],
+                sourceMap: true,
+                outDir: './dist',
+                moduleResolution: 'node',
+                declaration: true,
+                removeComments: true,
+                noImplicitAny: true,
+                strictNullChecks: true,
+                strictFunctionTypes: true,
+                noImplicitThis: true,
+                noUnusedLocals: false,
+                noUnusedParameters: true,
+                noImplicitReturns: true,
+                noFallthroughCasesInSwitch: true,
+                allowSyntheticDefaultImports: false,
+                emitDecoratorMetadata: true,
+                experimentalDecorators: true,
+                allowJs: true,
+            },
+            exclude: ['node_modules'],
+            include: ['./src/**/*.tsx', './src/**/*.ts'],
+        };
+    }
+
+    /**
+     * Makes the TS Build Config content.
+     * @function makeTSBuildConfig
+     * @memberof TypescriptService
+     * @returns {TSConfigType} TS Build Config.
+     */
+    makeTSBuildConfig(): TSConfigType {
+        return {
+            extends: './tsconfig.json',
+            exclude: ['node_modules', 'test', 'dist', '**/*spec.ts'],
+        };
+    }
+
+    /**
+     * Creates `tsconfig.json` and `tsconfig.build.json` files.
+     * @function createTSConfig
+     * @memberof TypescriptService
+     * @returns {void}
+     */
+    createTSConfig(): void {
+        writeFileSync(
+            join(this.serviceDirectory, 'tsconfig.json'),
+            JSON.stringify(this.makeTSConfig(), null, 4),
+        );
+        writeFileSync(
+            join(this.serviceDirectory, 'tsconfig.build.json'),
+            JSON.stringify(this.makeTSBuildConfig(), null, 4),
+        );
     }
 
     /**
