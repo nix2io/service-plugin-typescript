@@ -39,6 +39,18 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@nix2/prettier-config@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@nix2/prettier-config/-/prettier-config-1.0.0.tgz#8cb7d5c146f2866ab06019e43a2d783894c3cff2"
+  integrity sha512-/m/kGOtI7IIEfeg8ibu298QcgK55L7NkKf7VWTAQOSbTt631NNl+t2C5A+Iq6WC72XlBbOCvbx3P1ITmlhZJoQ==
+
+"@nix2/prettier-config@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@nix2/prettier-config/-/prettier-config-1.0.2.tgz#f82c005946c7cb3187e21cd452f0d21ef5ebf9ce"
+  integrity sha512-o3UmiAjy4O2ExoKm2/atW4iHwzhMJkNbYoSzXyEHN9lXCmbOtyMqeTNkrPwhmgZccisCPO1JVaVj/vwqxVIHnA==
+  dependencies:
+    "@nix2/prettier-config" "^1.0.0"
+
 "@nix2/service-core@1.0.11":
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/@nix2/service-core/-/service-core-1.0.11.tgz#59977714afe2f4f6965a5e52f0e7005ceab02f39"
