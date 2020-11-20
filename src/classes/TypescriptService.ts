@@ -96,6 +96,7 @@ export default abstract class TypescriptService extends Service {
             version: this.info.version || '1.0.0',
             main: './dist/index.js',
             license: this.info.license || 'CC-BY-1.0',
+            prettier: '@nix2/prettier-config',
             dependencies: this.dependencies,
             devDependencies: this.devDependencies,
             scripts: this.scripts,

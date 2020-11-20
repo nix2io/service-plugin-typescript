@@ -9,6 +9,7 @@ export const PACKAGES = {
             eslint: '7.13.0',
             'eslint-plugin-jsdoc': '30.7.7',
             prettier: '^2.1.2',
+            '@nix2/prettier-config': '^1.0.2',
         },
     },
 };

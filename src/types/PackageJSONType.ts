@@ -6,6 +6,7 @@ export default interface PackageJSONType {
     homepage?: string;
     license: string;
     author?: string | { name: string; url: string };
+    prettier?: string;
     main?: string;
     files?: string[];
     repository?: string | { type: string; url: string };
